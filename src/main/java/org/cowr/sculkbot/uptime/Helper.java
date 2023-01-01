@@ -12,7 +12,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Helper {
-    private static final Logger log = LogManager.getLogger();
+    private static final Logger log = LogManager.getLogger(Helper.class);
 
     public static void noMethodExist(HttpExchange httpExchange) {
         error(httpExchange, 400, "No " + httpExchange.getRequestMethod() + " handler exists for endpoint " + httpExchange.getRequestURI());
