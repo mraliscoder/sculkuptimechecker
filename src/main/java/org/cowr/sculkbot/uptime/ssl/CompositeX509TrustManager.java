@@ -15,18 +15,12 @@ public class CompositeX509TrustManager implements X509TrustManager {
 
     @Override
     public void checkClientTrusted(X509Certificate[] x509Certificates, String s) throws CertificateException {
-        new MultiException<>(new CertificateException("This certificate chain couldn't be trusted"))
-                .collectFrom(trustManagers.stream(),
-                        trustManagers -> trustManagers.checkClientTrusted(x509Certificates, s))
-                .scream(MultiException.Mode.UNLESS_ANY_SUCCESS);
+        // do not do anything
     }
 
     @Override
     public void checkServerTrusted(X509Certificate[] x509Certificates, String s) throws CertificateException {
-        new MultiException<>(new CertificateException("This certificate chain couldn't be trusted"))
-                .collectFrom(trustManagers.stream(),
-                        trustManagers -> trustManagers.checkClientTrusted(x509Certificates, s))
-                .scream(MultiException.Mode.UNLESS_ANY_SUCCESS);
+        // do not do anything
     }
 
     @Override
