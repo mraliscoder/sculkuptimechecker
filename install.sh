@@ -36,16 +36,16 @@ if [ "$EUID" -ne 0 ]
 fi
 
 loginfo "Installing curl and JRE"
-apt-get update && apt-get install curl openjdk-17-jre
+apt-get update && apt-get install curl openjdk-17-jre -y
 
 loginfo "Preparing for installation..."
 mkdir /opt/checker
 
 loginfo "Downloading Sculk UC..."
-curl "https://github.com/dpkgsoft/sculkuptimechecker/releases/latest/download/uptimechecker.jar" -o /opt/checker/uptimechecker.jar
+curl -s "https://github.com/dpkgsoft/sculkuptimechecker/releases/latest/download/uptimechecker.jar" -o /opt/checker/uptimechecker.jar
 
 loginfo "Creating service..."
-curl "https://raw.githubusercontent.com/dpkgsoft/sculkuptimechecker/master/sculkuptime.service" -o /etc/systemd/system/sculkuptime.jar
+curl -s "https://raw.githubusercontent.com/dpkgsoft/sculkuptimechecker/master/sculkuptime.service" -o /etc/systemd/system/sculkuptime.service
 
 loginfo "Starting service..."
 systemctl daemon-reload
