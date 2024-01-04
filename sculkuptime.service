@@ -1,0 +1,12 @@
+[Unit]
+Description=sculkuptime
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/java -jar uptimechecker.jar
+WorkingDirectory=/opt/checker
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
