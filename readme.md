@@ -17,7 +17,7 @@ Sculk UC - программа для проверки работоспособн
 ## Установка
 Для установки необходимо выполнить следующую команду от имени администратора (root): 
 ```bash
-apt-get update && apt-get install curl -y && bash <(curl https://raw.githubusercontent.com/dpkgsoft/sculkuptimechecker/master/install.sh)
+apt-get update && apt-get install curl -y && bash <(curl https://raw.githubusercontent.com/mraliscoder/sculkuptimechecker/master/install.sh)
 ```
 Данная команда обновит список пакетов, установит curl и выполнит установочный скрипт.
 
@@ -41,7 +41,7 @@ apt-get update && apt-get install curl -y && bash <(curl https://raw.githubuserc
 ## Обновление
 Мы стараемся не выпускать обновления к данному ПО. Однако, если потребуется, мы свяжемся с Вами и попросим обновить приложение. Для обновления нужно выполнить данные команды:
 ```bash
-wget "https://github.com/dpkgsoft/sculkuptimechecker/releases/latest/download/uptimechecker.jar" -O /opt/checker/uptimechecker.jar
+wget "https://github.com/mraliscoder/sculkuptimechecker/releases/latest/download/uptimechecker.jar" -O /opt/checker/uptimechecker.jar
 systemctl restart sculkuptime
 ```
 
@@ -145,4 +145,4 @@ _Ответ в случае ошибки (применим ко всем мет�
 ```
 
 ## Copyright
-(C) 2022 - 2024 [DpkgSoft Computers LLC](https://dpkgsoft.com)
+(C) 2022 - 2024 [edwardcode](https://edwardcode.net)
