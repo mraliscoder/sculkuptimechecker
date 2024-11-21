@@ -49,7 +49,7 @@ public class HTTPContext implements HttpHandler {
                     if (Objects.equals(url.getProtocol(), "http")) {
                         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
-                        connection.setRequestProperty("User-Agent", "SculkUptimeChecker/" + Checker.VERSION + " (DpkgSoft Computers LLC; http://sculk.ru/; support@dpkgsoft.com)");
+                        connection.setRequestProperty("User-Agent", "SculkUptimeChecker/" + Checker.VERSION + " (Sculk Ltd.; http://sculk.ru/; me@edwardcode.net)");
                         connection.setConnectTimeout(3000);
                         connection.connect();
 
@@ -57,7 +57,7 @@ public class HTTPContext implements HttpHandler {
                     } else if (url.getProtocol().equalsIgnoreCase("https")) {
                         HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
 
-                        connection.setRequestProperty("User-Agent", "SculkUptimeChecker/" + Checker.VERSION + " (DpkgSoft Computers LLC; http://sculk.ru/; support@dpkgsoft.com)");
+                        connection.setRequestProperty("User-Agent", "SculkUptimeChecker/" + Checker.VERSION + " (Sculk Ltd.; http://sculk.ru/; me@edwardcode.net)");
                         connection.setConnectTimeout(3000);
                         connection.connect();
 
