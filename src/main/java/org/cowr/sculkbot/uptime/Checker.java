@@ -37,9 +37,9 @@ public class Checker {
             VERSION = "development";
         }
 
-        log.info("----- DpkgSoft Computers LLC Project -----");
+        log.info("----------- Sculk Ltd. Project -----------");
         log.info("Starting Sculk Uptime Checker v. " + VERSION);
-        log.info("Copyright 2023 DpkgSoft Computers LLC");
+        log.info("Copyright 2024 Sculk Ltd.");
         log.info("------------------------------------------");
 
         File tokenFile = new File("token.txt");
