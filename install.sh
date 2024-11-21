@@ -25,7 +25,7 @@ loginfo () {
 
 clear
 echo -e ""
-echo -e "${WHITE}------------ ${YELLOW}XOREK.CLOUD ${WHITE}------------${NC}"
+echo -e "${WHITE}------------ ${YELLOW} SCULK BOT  ${WHITE}------------${NC}"
 echo -e "${WHITE}      Sculk UC Installation${NC}"
 echo -e "${WHITE}-------------------------------------${NC}"
 echo -e ""
@@ -42,10 +42,10 @@ loginfo "Preparing for installation..."
 mkdir /opt/checker
 
 loginfo "Downloading Sculk UC..."
-wget "https://github.com/dpkgsoft/sculkuptimechecker/releases/latest/download/uptimechecker.jar" -O /opt/checker/uptimechecker.jar
+wget "https://github.com/mraliscoder/sculkuptimechecker/releases/latest/download/uptimechecker.jar" -O /opt/checker/uptimechecker.jar
 
 loginfo "Creating service..."
-wget "https://raw.githubusercontent.com/dpkgsoft/sculkuptimechecker/master/sculkuptime.service" -O /etc/systemd/system/sculkuptime.service
+wget "https://raw.githubusercontent.com/mraliscoder/sculkuptimechecker/master/sculkuptime.service" -O /etc/systemd/system/sculkuptime.service
 
 loginfo "Starting service..."
 systemctl daemon-reload
